@@ -17,9 +17,4 @@ class NormalizerBolt(Bolt):
         # TODO:
         # Task 1: make the words all lower case
         # Task 2: remove the common words
-
-        word = tup.values[0]
-        if word:
-            word = word.lower()
-            if word not in self.common_words:
-                self.emit([word])
+        # Task 3: use the "self.logger.info(...)" function to print 1. the message received and 2. the message emitted

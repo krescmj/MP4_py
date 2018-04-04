@@ -12,10 +12,6 @@ class FileReaderSpout(Spout):
 
         # TODO:
         # Task: Initialize the file reader
-        with open(datafile, 'r') as f:
-            self.lines = f.readlines()
-            self.num_lines = len(self.lines)
-            self.num_emitted = 0
 
 
     def next_tuple(self):
@@ -25,14 +21,7 @@ class FileReaderSpout(Spout):
         #         entirely read to prevent a busy-loop
         # Task 3: use the "self.logger.info(...)" function to print 1. the message received and 2. the message emitted 
 
-         if self.num_emitted < self.num_lines:
-            self.emit([self.lines[self.num_emitted]])
-            self.logger.info('- [pid={}] - Emitting:spout [{}]'.format(self.pid,self.lines[self.num_emitted]))
-            self.num_emitted += 1
-            if self.num_emitted == self.num_lines:
-                self.logger.info('- [pid={}] - Emitting:spout: File emission complete')
-         else:
-            sleep(1)
+        pass
 
     # NOTE: Streamparse does not have a close() function
     #       Closing the file should be handled in initialize() itself
