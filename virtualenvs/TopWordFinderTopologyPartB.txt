@@ -1,0 +1,2 @@
+# streamparse # always required for streamparse projects
+git+git://github.com/srujun/streamparse.git#egg=streamparse
