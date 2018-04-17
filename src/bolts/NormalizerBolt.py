@@ -18,3 +18,10 @@ class NormalizerBolt(Bolt):
         # Task 1: make the words all lower case
         # Task 2: remove the common words
         # Task 3: use the "self.logger.info(...)" function to print 1. the message received and 2. the message emitted
+		word = tup.values[0]
+		
+		word.lower()
+		
+		if w not in stopwords:
+			self.emit([word])
+			self.logger.info("- [pid={}] - Emitting: normalize default [{}]".format(self.pid,word))
