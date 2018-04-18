@@ -20,8 +20,10 @@ class NormalizerBolt(Bolt):
         # Task 3: use the "self.logger.info(...)" function to print 1. the message received and 2. the message emitted
 		word = tup.values[0]
 		
+		self.logger.info("- [pid={}] - Processing received message [{}]".format(self.pid,word))
+		
 		word.lower()
 		
 		if w not in stopwords:
 			self.emit([word])
-			self.logger.info("- [pid={}] - Emitting: normalize default [{}]".format(self.pid,word))
+			self.logger.info("- [pid={}] - Emitting: normalize [{}]".format(self.pid,word))

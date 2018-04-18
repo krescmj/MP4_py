@@ -33,7 +33,7 @@ class FileReaderSpout(Spout):
 		#sleep(1.0)
         sentence = next(self.sentences)
         self.emit([sentence])
-        self.logger.info("- [pid={}] - Emitting: spout default [{}]".format(self.pid,sentence))
+        self.logger.info("- [pid={}] - Emitting: spout [{}]".format(self.pid,sentence))
         sleep(1.0)
 		
         #pass

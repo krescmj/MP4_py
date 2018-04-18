@@ -8,4 +8,4 @@ class SplitSentenceBolt(Bolt):
         self.logger.info("- [pid={}] - Processing received message [{}]".format(self.pid,sentence))
         for word in sentence.split():
             self.emit([word])
-            self.logger.info("- [pid={}] - Emitting: split default [{}]".format(self.pid,word))
+            self.logger.info("- [pid={}] - Emitting: split [{}]".format(self.pid,word))
