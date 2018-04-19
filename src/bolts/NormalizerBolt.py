@@ -24,6 +24,6 @@ class NormalizerBolt(Bolt):
 		
 		word.lower()
 		
-		if w not in stopwords:
+		if word not in stopwords:
 			self.emit([word])
 			self.logger.info("- [pid={}] - Emitting: normalize [{}]".format(self.pid,word))
