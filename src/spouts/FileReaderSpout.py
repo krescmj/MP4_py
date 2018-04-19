@@ -7,7 +7,7 @@ from streamparse import Spout
 class FileReaderSpout(Spout):
     outputs = ['word']
 	
-    sentences = list()
+    sentence_list = list()
 
     def initialize(self, stormconf, context):
         datafile = join(os.getcwd(), stormconf['coursera.datafile'])
@@ -18,9 +18,11 @@ class FileReaderSpout(Spout):
         self.f = open('datafile', 'r')
 		
         for self.line in self.f:
-			self.sentences.appened(self.line)
+                self.sentence_list.append(self.line)
 			
         self.f.close()
+		
+        self.sentences = iter(self.sentence_list)
 
 
     def next_tuple(self):
