@@ -21,7 +21,7 @@ class TopNFinderBolt(Bolt):
 
 		self.logger.info("- [pid={}] - Processing received message [{},{}]".format(self.pid,word,count))
 		
-		self.counter[word] += count
+		self.top_words[word] += count
 
         # report the top N words periodically
 		if time.time() - self.last_report >= self.interval:
