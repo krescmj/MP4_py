@@ -17,8 +17,8 @@ class FileReaderSpout(Spout):
 		
         self.f = open('datafile', 'r')
 		
-        for self.line in self.f:
-                self.sentence_list.append(self.line)
+        for line in self.f.readlines():
+                self.sentence_list.append(self.line.strip())
 			
         self.f.close()
 		
