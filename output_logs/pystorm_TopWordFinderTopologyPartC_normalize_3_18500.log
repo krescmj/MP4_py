@@ -1,0 +1,10 @@
+2018-04-19 03:22:47,855 - pystorm.component.normalize - INFO - - [pid=18500] - Processing received message [***The]
+2018-04-19 03:22:47,855 - pystorm.component.normalize - ERROR - Exception in NormalizerBolt.run()
+Traceback (most recent call last):
+  File "/data/virtualenvs/TopWordFinderTopologyPartC/local/lib/python2.7/site-packages/pystorm/component.py", line 488, in run
+    self._run()
+  File "/data/virtualenvs/TopWordFinderTopologyPartC/local/lib/python2.7/site-packages/pystorm/bolt.py", line 197, in _run
+    self.process(tup)
+  File "/usr/local/apache-storm-1.0.6/storm-local/supervisor/stormdist/TopWordFinderTopologyPartC-17-1524108076/resources/bolts/NormalizerBolt.py", line 27, in process
+    if w not in stopwords:
+NameError: global name 'w' is not defined

@@ -1,0 +1,3 @@
+2018-04-19 03:21:37,313 - pystorm.component.spout - INFO - - [pid=17772] - Emitting: spout [***The Project Gutenberg's Etext of Shakespeare's First Folio***]
+2018-04-19 03:21:37,417 - pystorm.component.spout - INFO - - [pid=17772] - Emitting: spout [********************The Tragedie of Macbeth*********************]
+2018-04-19 03:21:37,540 - pystorm.component.spout - INFO - - [pid=17772] - Emitting: spout []
