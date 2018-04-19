@@ -32,11 +32,10 @@ class FileReaderSpout(Spout):
         #         entirely read to prevent a busy-loop
         # Task 3: use the "self.logger.info(...)" function to print 1. the message received and 2. the message emitted 
 
-		#sleep(1.0)
+		sleep(1.0)
         sentence = next(self.sentences)
         self.emit([sentence])
         self.logger.info("- [pid={}] - Emitting: spout [{}]".format(self.pid,sentence))
-        sleep(1.0)
 		
         #pass
 
